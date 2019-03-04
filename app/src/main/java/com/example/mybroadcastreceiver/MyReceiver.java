@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String msg = DateFormat.getDateTimeInstance().format(new Date());
+        Log.d("Test", "onReceive: wurde aufgerufen ");
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationChannel channel = null;
