@@ -45,7 +45,7 @@ public class MyReceiver extends BroadcastReceiver {
                 }
 
                 Intent myIntent = new Intent(context, MainActivity.class);
-                PendingIntent pendingIntent = PendingIntent.getBroadcast(context,1,myIntent,
+                PendingIntent pendingIntent = PendingIntent.getActivity(context,ID,myIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
                 builder.setContentIntent(pendingIntent);
                 Notification notification = builder.build();
